@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kpop shuffler</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <link rel="shortcut icon" type="image/gif", href="icon.gif" />
+    </head>
+    <body>
+        <h2>kpop shuffler v 1.0</h2>
+        <div style="float:left; margin-bottom:10px">
+            <input type="checkbox" id="vid_check"> Don't show video (faster)
+            <div style="height:10px"></div>
+            <iframe id="vid" src="" width="778" height="438" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="float:left; height:430px; width:400px; margin:10px">
+            <div style="height:25px"></div>
+            <button type="button" id="b_artist" style="font-size:90%">anything!</button>
+            <div style="height:10px"></div>
+            <button type="button" id="b_popular" style="font-size:90%">popular</button>
+            <div style="height:10px"></div>
+            <hr>
+            <div style="height:10px"></div>
+            <button type="button" id="b_female" style="font-size:90%">female</button>
+            <div style="height:10px"></div>
+            <button type="button" id="b_male" style="font-size:90%">male</button>
+            <div style="height:10px"></div>
+            <hr>
+            <div style="height:10px"></div>
+            <button type="button" id="b_esoteric_all" style="font-size:90%">esoteric (all)</button>
+            <div style="height:10px"></div>
+            <button type="button" id="b_esoteric_f" style="font-size:90%">esoteric (female)</button>
+            <div style="height:10px"></div>
+            <button type="button" id="b_esoteric_m" style="font-size:90%">esoteric (male)</button>
+            <div style="height:10px"></div>
+            <hr>
+            <div style="height:10px"></div>
+            <label for="input">you choose:</label>
+            <input type="text" id="input" name="input" placeholder="enter artist name">
+            <button type="button" id="b_input" style="font-size:90%">submit</button>
+            <div style="height:10px"></div>
+            <label for="search">personalized results:</label>
+            <input id="search" type="search" list="usernames" placeholder="choose from sample sets">
+            <datalist id="usernames">
+                <option value="example_1"></option>
+                <option value="example_2"></option>
+                <option value="example_3"></option>
+                <option value="example_4"></option>
+            </datalist>
+            <button type="button" id="b_search" style="font-size:90%">submit</button>
+        </div>
+        <div style="clear:both">
+            <p id="txt" style="font-size:160%;"></p>
+        </div>
+        <script type='text/javascript' src='config.js'></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
