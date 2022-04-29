@@ -21,7 +21,7 @@
  * @return {any}       Selected element from array
  */
 var randomizer = function (array) {
-    let rand = array[Math.floor(Math.random() * array_length)];
+    let rand = array[Math.floor(Math.random() * array.length)];
     return rand;
 };
 
