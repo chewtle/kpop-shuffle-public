@@ -62,7 +62,7 @@ var read_file = function (file, callback) {
 var main_func = function (file) {
 
     // Call: get artist name from the file
-    readFile(file, function(txt) {
+    read_file(file, function(txt) {
 
         // If the artist name is received through a URL
         if (file.includes("http")) {
@@ -77,7 +77,7 @@ var main_func = function (file) {
         }
 
         // Call: get the MusicBrainz ID of the artist
-        readFile("https://beta.musicbrainz.org/ws/2/artist?query=" + encodeURIComponent(artist) + "&fmt=json", function(json) {
+        read_file("https://beta.musicbrainz.org/ws/2/artist?query=" + encodeURIComponent(artist) + "&fmt=json", function(json) {
             var data = JSON.parse(json);
             for (i = 0; i < data.artists.length; ++i) {
                 if (data.artists[i].country == "KR") {
@@ -89,7 +89,7 @@ var main_func = function (file) {
             }
 
             // Call: get track name
-            readFile("https://beta.musicbrainz.org/ws/2/release?artist=" + artist_ID + "&inc=release-groups+recordings&fmt=json", function(json) {
+            read_file("https://beta.musicbrainz.org/ws/2/release?artist=" + artist_ID + "&inc=release-groups+recordings&fmt=json", function(json) {
                 var data = JSON.parse(json);
                 const unwanted = ['Interview', 'Live', 'DJ-mix'];
                 var release_array = [];
@@ -118,7 +118,7 @@ var main_func = function (file) {
                     var youtube_key = config.API_KEY;
 
                     // Call: get YouTube video ID
-                    readFile('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q="' + encodeURIComponent(artist) + '" "' + encodeURIComponent(track) + '"&key=' + youtube_key, function(json) {
+                    read_file('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q="' + encodeURIComponent(artist) + '" "' + encodeURIComponent(track) + '"&key=' + youtube_key, function(json) {
                         var data = JSON.parse(json);
                         try {
                             var vid_ID = data.items[0].id.videoId;
