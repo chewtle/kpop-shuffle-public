@@ -6,12 +6,11 @@
 
 
 
- require("dotenv").config();
-
 // Sets user-agent
  Object.defineProperty(navigator, 'userAgent', {
     get: function () {
-        return 'kpop-shuffle/0.1.0 ( ' + process.env.EMAIL + ' )';
+        var email = config.EMAIL;
+        return 'kpop-shuffle/0.1.0 ( ' + email + ' )';
     }
 });
 
@@ -116,9 +115,10 @@ var main_func = function (file) {
                     var text = artist + " - " + track;
                     document.getElementById("txt").innerHTML = text;
                 } else {
+                    var youtube_key = config.API_KEY;
 
                     // Call: get YouTube video ID
-                    read_file('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q="' + encodeURIComponent(artist) + '" "' + encodeURIComponent(track) + '"&key=' + process.env.API_KEY, function(json) {
+                    read_file('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q="' + encodeURIComponent(artist) + '" "' + encodeURIComponent(track) + '"&key=' + youtube_key, function(json) {
                         var data = JSON.parse(json);
                         try {
                             var vid_ID = data.items[0].id.videoId;
