@@ -168,7 +168,7 @@ var on_input = function () {
  */
 var on_search = function () {
     var search_text = document.getElementById("search").value;
-    main_func("https://chewtle.github.io/kpop-shuffle/personalized/" + search_text + ".txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/personalized/" + search_text + ".txt");
 };
 
 
@@ -177,25 +177,25 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById("vid").src = "";
 });
 document.getElementById("b_artist").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/artists.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/artists.txt");
 });
 document.getElementById("b_popular").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/popular.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/popular.txt");
 });
 document.getElementById("b_female").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/female.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/female.txt");
 });
 document.getElementById("b_male").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/male.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/male.txt");
 });
 document.getElementById("b_esoteric_all").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/esoteric_all.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/esoteric_all.txt");
 });
 document.getElementById("b_esoteric_f").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/esoteric_f.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/esoteric_f.txt");
 });
 document.getElementById("b_esoteric_m").addEventListener("click", function() {
-    main_func("https://chewtle.github.io/kpop-shuffle/documents/esoteric_m.txt");
+    main_func("https://chewtle.github.io/kpop-shuffle-public/documents/esoteric_m.txt");
 });
 document.getElementById("b_input").addEventListener("click", on_input);
 document.getElementById("input").addEventListener("keyup", function(event) {
