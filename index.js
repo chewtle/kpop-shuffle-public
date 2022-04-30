@@ -1,6 +1,11 @@
 /**
- * Script for kpop shuffle web application.
+ * k-pop shuffler is a web application for K-pop music discovery.
  *
+ * Shuffles K-pop songs according to selected parameters. Uses the MusicBrainz API to gather data on artists and songs,
+ * and the YouTube Data API to display relevant YouTube videos.
+ *
+ * @link   https://chewtle.github.io/kpop-shuffle-public/
+ * @file   This is the script file for the web application.
  * @author Erica H.
  */
 
